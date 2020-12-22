@@ -10,4 +10,15 @@
       </ol>
     </div>
   </div>
+  <div class="row">
+    <hr>
+    <div class="col-md-6">
+      <button (click)="detailsToggle()" class="btn btn-primary">Display Details</button>
+      <p *ngIf="this.showDetails">Secret Password = tuna</p>
+    </div>
+    <div class="col-md-6">
+      <div>{{clickLog.length}}</div>
+      <div [ngStyle]="timestamp.c >=5 ? {backgroundColor: 'blue'} : {}" [ngClass]="timestamp.c >=5 ? 'highlight' : ''" *ngFor="let timestamp of clickLog">{{ timestamp.val }}</div>
+    </div>
+  </div>
 </div>
