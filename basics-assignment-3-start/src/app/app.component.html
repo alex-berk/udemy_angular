@@ -18,7 +18,7 @@
     </div>
     <div class="col-md-6">
       <div>{{clickLog.length}}</div>
-      <div [ngStyle]="timestamp.c >=5 ? {backgroundColor: 'blue'} : {}" [ngClass]="timestamp.c >=5 ? 'highlight' : ''" *ngFor="let timestamp of clickLog">{{ timestamp.val }}</div>
+      <div [ngStyle]="i >=5 ? {backgroundColor: 'blue'} : {}" [ngClass]="i >=5 ? 'highlight' : ''" *ngFor="let timestamp of clickLog; let i = index">{{ timestamp }}</div>
     </div>
   </div>
 </div>

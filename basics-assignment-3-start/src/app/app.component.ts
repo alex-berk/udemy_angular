@@ -13,7 +13,7 @@ export class AppComponent {
     if (this.showDetails) {
       this.showDetails = false;
     } else {
-      this.clickLog.push({val: Date.now(), c: this.clickLog.length + 1});
+      this.clickLog.push(Date());
       this.showDetails = true;
     }
   }
