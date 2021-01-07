@@ -20,7 +20,7 @@
       <app-game-control (emitStuff)="displayStuff($event)">
         <div class="col-xs-6">
         <app-odd
-        *ngFor="let num of oddComponents">{{ num }}</app-odd>
+        *ngFor="let num of oddComponents" [number]="num"></app-odd>
         </div>
         <div class="col-xs-6">
           <app-even
