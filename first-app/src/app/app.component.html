@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>{{ title }}</title>
 </head>
 <body>
-  <app-header></app-header>
+  <app-header (menuItemSelected)="displayScreen($event)"></app-header>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <app-recipes></app-recipes>
-        <app-shopping-list></app-shopping-list>
+        <app-recipes
+        *ngIf="activeScreen=='recipes'"></app-recipes>
+        <app-shopping-list
+        *ngIf="activeScreen=='shopping-list'"></app-shopping-list>
       </div>
     </div>
   </div>

@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'first-app';
+  title = 'Recipe Book';
+  activeScreen = "recipes";
+
+  displayScreen(screenName:string){
+    this.activeScreen = screenName;
+  }
 }
