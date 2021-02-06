@@ -1,13 +1,10 @@
-import { Component, Output, EventEmitter } from "@angular/core"
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: "app-header",
     templateUrl: "header.component.html"
 })
 export class HeaderComponent{
-    @Output() menuItemSelected = new EventEmitter<string>();
-
-    menuClicked(itemClicked: string){
-        this.menuItemSelected.emit(itemClicked);
-    }
+    constructor(private router: Router) {}
 }

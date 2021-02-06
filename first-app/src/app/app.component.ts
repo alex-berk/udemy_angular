@@ -7,9 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Recipe Book';
-  activeScreen = "recipes";
-
-  displayScreen(screenName:string){
-    this.activeScreen = screenName;
-  }
 }

@@ -1,5 +1,4 @@
-<div
-*ngIf="recipe; else placeholder">
+<div>
     <div class="row">
         <div class="col-xs-12"><img style="max-width: 150px" [src]="recipe.imagePath" alt="" class="img-responsive"></div>
     </div>
@@ -11,14 +10,14 @@
     <div class="row">
         <div class="col-xs-12">
             <div appDropdown class="btn-group">
-                <button class="btn btn-primary dropdown-toggle" type="button"
-                (click)="toShoppingList()">
+                <button class="btn btn-primary dropdown-toggle" type="button">
                     Manage Recipes <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a href="#">To Shopping List</a></li>
-                    <li><a href="#">Edit Recipe</a></li>
-                    <li><a href="#">Delete Recipe</a></li>
+                    <li><a (click)="toShoppingList()" style="cursor: pointer;">
+                        To Shopping List</a></li>
+                    <li><a style="cursor: pointer;">Edit Recipe</a></li>
+                    <li><a style="cursor: pointer;">Delete Recipe</a></li>
                 </ul>
             </div>
         </div>
@@ -38,10 +37,3 @@
         </div>
     </div>
 </div>
-<ng-template #placeholder>
-    <div class="row">
-        <div class="col-xs-12">
-            <h1>No Recipe Chosen</h1>
-        </div>
-    </div>
-</ng-template>
